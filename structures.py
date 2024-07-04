@@ -1,4 +1,5 @@
 import dataclasses
+from typing import Optional
 
 
 @dataclasses.dataclass
@@ -20,3 +21,14 @@ class ChannelData:
     title: str
     link: str
     votes: list[DirectorInfo]
+
+
+@dataclasses.dataclass
+class DirectorsInfoStatistics:
+    name: str
+    films: dict[str, int]
+    total_rating: int
+    total_votes: int
+    rating_dict: dict[int, int]
+    places_dict: dict[int, int]
+    final_place: Optional[int] = None

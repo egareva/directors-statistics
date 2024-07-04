@@ -1,7 +1,7 @@
 from structures import ChannelData, DirectorInfo
-from tools import get_cleaned_data, clean_quotes, remove_year
+from utils.tools import get_cleaned_data, clean_quotes, remove_year
 from os import walk
-from channel_data_validator import ChannelDataValidator
+from utils.channel_data_validator import ChannelDataValidator
 
 
 def get_rating(index: int) -> int:
