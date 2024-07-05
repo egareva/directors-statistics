@@ -25,11 +25,12 @@ def get_unique_directors(channel_datas: list[ChannelData], top: int | None = Non
             all_names_by_rating[vote.name] += vote.rating
             directors_films[vote.name].extend(vote.films)
 
+    print(f"Total channels: {len(channel_datas)}\n")
+    print(f"Total names: {len(all_names_by_count)}\n")
     for name in sorted(all_names_by_count.keys()):
         print(name)
-
+    print("\n")
     if print_rating:
-        print(f"Total names: {len(all_names_by_count)}\n")
         for name in sorted(all_names_by_count.items(), key=lambda item: item[1], reverse=True):
             print(name)
         print("\n")
