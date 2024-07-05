@@ -48,4 +48,5 @@ def main():
     get_unique_directors(chanel_infos, print_rating=True)
 
 
-main()
+if __name__ == "__main__":
+    main()

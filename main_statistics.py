@@ -36,7 +36,9 @@ def count_statistics(channel_data_list: list[ChannelData]) -> OrderedDict[str, D
     return directors_statistics
 
 
-def sort_directors_info_by_rating(directors_info_statistics: OrderedDict[str, DirectorsInfoStatistics]):
+def sort_directors_info_by_rating(
+        directors_info_statistics: OrderedDict[str, DirectorsInfoStatistics]
+) -> list[DirectorsInfoStatistics]:
     sorted_values: list[DirectorsInfoStatistics] = sorted(
         directors_info_statistics.values(),
         key=lambda item: (
@@ -66,4 +68,5 @@ def main():
         print(f"Films {len(directors_stat.films)}: {dict(directors_stat.films)}")
 
 
-main()
+if __name__ == "__main__":
+    main()
