@@ -32,3 +32,4 @@ class DirectorsInfoStatistics:
     rating_dict: dict[int, int]
     places_dict: dict[int, int]
     final_place: Optional[int] = None
+    average_vote_place: Optional[float] = None
