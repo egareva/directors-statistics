@@ -69,7 +69,6 @@ class RawDataLoader:
         filenames = next(walk(folder_name), (None, None, []))[2]
         chanel_infos: list[ChannelData] = []
         for filename in filenames:
-            print(filename)
             chanel_data = cls.load_raw_data(f"{folder_name}/{filename}")
             ChannelDataValidator.validate(chanel_data)
             chanel_infos.append(chanel_data)
