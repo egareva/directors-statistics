@@ -48,7 +48,7 @@ def sort_directors_info_by_rating(
             item.rating_dict[3],
             item.rating_dict[2],
             item.rating_dict[1],
-            item.average_vote_place,
+            30 - item.average_vote_place,
         ),
         reverse=True,
     )
