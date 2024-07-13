@@ -9,7 +9,7 @@ def find_director(director_name: str, index: int):
     answer = requests.get(f"https://www.kinopoisk.ru/index.php?kp_query={director_name}")
     doc = PyQuery(answer.text)
     if answer.history and 'name' in answer.history[-1].url:
-        print(f"[{index}] {director_name} redirected")
+        # print(f"[{index}] {director_name} redirected")
         return
     try:
         found_name = list(doc(".search_results .most_wanted .name a").items())[0].text()
