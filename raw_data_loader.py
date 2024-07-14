@@ -4,7 +4,7 @@ from os import walk
 from utils.channel_data_validator import ChannelDataValidator
 
 
-def get_rating(index: int) -> int:
+def get_rating(index: int, channel_name: str) -> int:
     if index == 1:
         return 5
     if 2 <= index <= 5:
@@ -12,7 +12,7 @@ def get_rating(index: int) -> int:
     if 6 <= index <= 10:
         return 2
     if index > 30:
-        raise Exception()
+        raise Exception(f"{channel_name} has more than 30 films")
     return 1
 
 
@@ -60,7 +60,7 @@ class RawDataLoader:
                     director_line = get_cleaned_data(line)
                     director, films = RawDataLoader.get_films_list(director_line)
                     channel_data.votes.append(
-                        DirectorInfo(name=director, index=index, films=films, rating=get_rating(index))
+                        DirectorInfo(name=director, index=index, films=films, rating=get_rating(index, channel_name))
                     )
         return channel_data
 

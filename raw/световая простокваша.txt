@@ -4,8 +4,8 @@
 2. Жак Тати (Mon Oncle (1958); PlayTime (1967); Jour de Fête (1949); Les vacances de Monsieur Hulot (1953))
 3. Джон Кассаветис (Opening Night (1977); A Woman Under the Influence (1974); Love Streams (1984))
 4. Синъя Цукамото (Tokyo Fist (1995); Bullet Ballet (1998); Tetsuo (1989); Gemini (1999); A Snake of June (2002))
-5. Билли Уайлдер (The Apartment (1960); The Lost Weekend (1945); Sunset Boulevard (1950))
-6. Жуль Дассен (Du rififi chez les hommes (1955); Night and the City (1950); The Naked City (1948); Thieves’ Highway (1949))
+5. Билли Уайлдер (Квартира (1960); Потерянный уик-энд (1945); Бульвар Сансет (1950))
+6. Жюль Дассен (Du rififi chez les hommes (1955); Night and the City (1950); The Naked City (1948); Thieves’ Highway (1949))
 7. Такеши Китано (Sonatine (1993); Dolls (2002); Fireworks (1997); Brother (2000))
 8. Дэвид Линч (Голова-ластик (1977); Синий бархат (1986))
 9. Франсуа Трюффо (Tirez sur le pianiste (1960); La Nuit américaine (1973); Les Quatre Cents Coups (1959))
@@ -15,7 +15,7 @@
 13. Эрнст Любич (Design for Living (1933); The Shop Around the Corner (1940); To Be or Not to Be (1942); Bluebeard’s Eighth Wife (1938))
 14. Фрэнк Капра (Mr. Smith Goes to Washington (1939); Arsenic and Old Lace (1944); Mr. Deeds Goes to Town (1936))
 15. Жан Кокто (Orphée (1950))
-16. Вим Вендерс (Der Himmel über Berlin (1987); Der amerikanische Freund (1977); Perfect Days (2023))
+16. Вим Вендерс (Небо над Берлином (1987); Американский друг (1977); Идеальные дни (2023))
 17. Сэйдзюн Судзуки (Youth of the Beast (1963); Gate of Flesh (1964); Branded to Kill (1967))
 18. Элейн Мей (Mikey and Nicky (1976); A New Leaf (1971))
 19. Вернер Херцог (Nosferatu - Phantom der Nacht (1979); Fitzcarraldo (1982); La Soufrière: Warten auf eine unausweichliche Katastrophe (1977))
@@ -34,3 +34,4 @@
 # Такеси Китано -> Такеши Китано
 # Жан Люк Годар -> Жан-Люк Годар
 # Элейн Мэй -> Элейн Мей
+# Жуль Дассен -> Жюль Дассен

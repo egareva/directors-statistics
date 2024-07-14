@@ -6,7 +6,10 @@ from raw_data_loader import RawDataLoader
 
 
 def find_director(director_name: str, index: int):
-    answer = requests.get(f"https://www.kinopoisk.ru/index.php?kp_query={director_name}")
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    }
+    answer = requests.get(f"https://www.kinopoisk.ru/index.php?kp_query={director_name}", headers=headers)
     doc = PyQuery(answer.text)
     if answer.history and 'name' in answer.history[-1].url:
         # print(f"[{index}] {director_name} redirected")
@@ -17,6 +20,17 @@ def find_director(director_name: str, index: int):
             print(f"[{index}] Different: {director_name} -> {found_name}")
     except IndexError:
         print(f"[{index}] Director not found: {director_name}")
+
+
+def get_director_page(url: str, director_name: str, ):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    }
+    answer = requests.get(url, headers=headers)
+    doc = PyQuery(answer.text)
+    found_name = list(doc("h1").items())[0].text()
+    if found_name != director_name:
+        print(f"Different: {director_name} -> {found_name}")
 
 
 def check_directors():
