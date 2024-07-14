@@ -1,4 +1,5 @@
 import plotly.express as px
+import plotly
 import pandas as pd
 import plotly.graph_objects as go
 from structures import ChannelData, DirectorsInfoStatistics
@@ -13,7 +14,7 @@ def get_simple_data_frame(directors_statistics: list[DirectorsInfoStatistics]):
     counts = []
     marks_totals = []
 
-    for index, directors_statistic in enumerate(directors_statistics[:105], start=1):
+    for index, directors_statistic in enumerate(directors_statistics[:150], start=1):
         name = directors_statistic.name
         for score, count in directors_statistic.rating_dict.items():
             names.append(f"{name} [{index}] ")
@@ -62,6 +63,7 @@ def show_marks_count_graphics(directors_statistics: list[DirectorsInfoStatistics
     ))
     # marks_diagram.update_layout(yaxis={'categoryorder': 'total ascending'})
     marks_diagram.show()
+    # plotly.offline.plot(marks_diagram, filename='file.html')
 
 
 def show_places_graphics(directors_statistics: list[DirectorsInfoStatistics]):

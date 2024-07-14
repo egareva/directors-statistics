@@ -16,7 +16,7 @@ def main():
         for channel_title_2, channel_vector_2 in channel_vectors.items():
             # Для построения без учёта рейтинга use_rating=False
             # Для построения с учётом рейтинга use_rating=False
-            similarity = calculate_similarity(channel_vector_1, channel_vector_2, use_rating=False)
+            similarity = calculate_similarity(channel_vector_1, channel_vector_2, use_rating=True)
             # print(channel_title_1, channel_title_2, similarity)
             similarity_vector.append(similarity)
         vector_of_vectors.append(similarity_vector)
