@@ -27,10 +27,11 @@ def jaccard_similarity(word1: str, word2: str, n: int = 2) -> float:
 
 def check_directors_similarity(directors_list: list[str]) -> None:
     for index, director_name_1 in enumerate(directors_list):
-        for director_name_2 in directors_list[index:]:
-            similarity = jaccard_similarity(director_name_1, director_name_2)
-            if 0.4 < similarity < 1:
-                print(f"{director_name_1} | {director_name_2} | {similarity}")
+        for director_name_2 in directors_list:
+            if director_name_1 != director_name_2:
+                similarity = jaccard_similarity(director_name_1, director_name_2)
+                if 0.4 < similarity <= 1:
+                    print(f"{director_name_1} | {director_name_2} | {similarity}")
 
 
 def check_directors_films_similarity(channel_datas: list[ChannelData]):
