@@ -47,7 +47,7 @@ def main():
     print("\n")
     print_top_count_films(statistics=list(stats.values()), top=20)
     print("\n")
-    print_top_popular_films(statistics=list(stats.values()), top=20)
+    print_top_popular_films(statistics=list(stats.values()), top=30)
 
 if __name__ == "__main__":
     main()

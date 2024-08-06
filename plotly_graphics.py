@@ -2,9 +2,8 @@ import plotly.express as px
 import plotly
 import pandas as pd
 import plotly.graph_objects as go
-from structures import ChannelData, DirectorsInfoStatistics
+from structures import DirectorsInfoStatistics
 from raw_data_loader import RawDataLoader
-from collections import OrderedDict, defaultdict
 from main_statistics import count_statistics, sort_directors_info_by_rating
 
 

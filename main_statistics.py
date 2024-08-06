@@ -62,10 +62,12 @@ def main():
     chanel_infos = RawDataLoader.get_directors_info_from_folder(folder_name="./raw")
     stats = count_statistics(chanel_infos)
     for directors_stat in sort_directors_info_by_rating(stats):
-        print(f"[{directors_stat.final_place}] {directors_stat.name} = {directors_stat.total_rating}, "
-              f"votes={directors_stat.total_votes}, avg={round(directors_stat.average_vote_place, 3)}")
-        print(directors_stat.rating_dict)
-        print(f"Films {len(directors_stat.films)}: {dict(directors_stat.films)}")
+        print(f"[{directors_stat.final_place}] {directors_stat.name}")
+        print(f"Итоговый балл: {directors_stat.total_rating}. Всего голосов: {directors_stat.total_votes}")
+        print(f"Распределение баллов: {directors_stat.rating_dict}")
+        print(f"Среднее место: {round(directors_stat.average_vote_place, 3)}")
+        print(f"Список фильмов [{len(directors_stat.films)}]: {dict(directors_stat.films)}")
+        print("")
 
 
 if __name__ == "__main__":

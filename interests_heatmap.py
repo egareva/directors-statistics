@@ -1,3 +1,4 @@
+import plotly
 import plotly.express as px
 from utils.similarity import calculate_similarity
 from raw_data_loader import RawDataLoader
@@ -26,11 +27,13 @@ def main():
         text_auto=True,
         x=list(channel_vectors.keys()),
         y=list(channel_vectors.keys()),
-        height=3000,
-        width=3000,
+        height=4000,
+        width=4000,
     )
     fig.update_xaxes(side="bottom")
+    fig.update_layout(dragmode=False)
     fig.show()
+    plotly.offline.plot(fig, filename='heatmap_with_rating.html')
 
 
 if __name__ == "__main__":
